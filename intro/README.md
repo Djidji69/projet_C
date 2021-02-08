@@ -1,0 +1,1 @@
+file-1 : printf the text "hello word !"
