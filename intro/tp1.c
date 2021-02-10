@@ -5,44 +5,34 @@
    int main()
 {
   const int MAX = 100, MIN = 1;
-  int nombreMystere;
+  int nombreMystere, nombre;
   srand(time(NULL));
   nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
   
-  int nombre;
-  printf("Tapez un nombre compris entre 1 et 100.\n");
-  printf("Quel est le nombre ?\n");
-  scanf("%d",&nombre);
-
-
-  /*if (nombre == nombreMystere)
-    {
-      printf("vous avez touver le nombre mystere !!!\n");
-    }
-  	
-    else*/ 
-    while (nombre != nombreMystere)
-    { 
+  while (nombre != nombreMystere)
+ /*on peut utiliser d ela même manier la boucle do {....} while(nombre != nombreMystere)*/
+     { 
+      
+       printf("Quel est le nombre ?\n");
+       scanf("%d",&nombre);
+      
       if (nombre > nombreMystere)
 	
 	{	
 	printf("c'est moins !\n");
-  	printf("Quel est le nombre ?\n");
-	scanf("%d",&nombre);
-	}
+  	}
       
       else if (nombre < nombreMystere)
 	{
-	printf("c'est plus !\n");
-        printf("Quel est le nombre ?\n");
-        scanf("%d",&nombre);
+        printf("c'est plus !\n");
 	}
-    }
-  if (nombre == nombreMystere)
-       {
+  
+      else 
+	{
             printf("vous avez touver le nombre mystere !!!\n");
-       }
-
+	}
+      }
+     
   return 0;
 
 }
